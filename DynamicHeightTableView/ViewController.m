@@ -86,10 +86,11 @@
         if (!cell) {
             cell = [[YQTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
+        [cell setContentText:data];
         // cache it, if there is a cache
         [_cellCache setObject:cell forKey:key];
     }
-    [cell setContentText:data];
+    
     return cell;
     
 }
